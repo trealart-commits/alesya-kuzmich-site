@@ -1,20 +1,20 @@
 :root {
-  --bg: #eeede7;
-  --surface: rgba(247, 245, 238, 0.84);
-  --surface-strong: rgba(255, 255, 251, 0.94);
-  --ink: #171717;
-  --muted: rgba(23, 23, 23, 0.58);
-  --line: rgba(23, 23, 23, 0.18);
-  --accent-one: #d45b4f;
-  --accent-two: #2c837b;
-  --accent-three: #c49a28;
-  --accent-four: #4f63b8;
-  --accent-five: #9a6249;
-  --accent-six: #6f6a5f;
-  --shadow: rgba(0, 0, 0, 0.12);
-  --ring: rgba(23, 23, 23, 0.08);
-  --button-bg: #171717;
-  --button-ink: #ffffff;
+  --bg: #f7eadc;
+  --surface: rgba(255, 247, 235, 0.86);
+  --surface-strong: rgba(255, 252, 245, 0.95);
+  --ink: #25150e;
+  --muted: rgba(37, 21, 14, 0.62);
+  --line: rgba(131, 54, 25, 0.18);
+  --accent-one: #c93421;
+  --accent-two: #f07322;
+  --accent-three: #d99a12;
+  --accent-four: #a71932;
+  --accent-five: #c46a2a;
+  --accent-six: #8d4f22;
+  --shadow: rgba(126, 55, 18, 0.16);
+  --ring: rgba(201, 93, 25, 0.13);
+  --button-bg: #2a130b;
+  --button-ink: #fff8ed;
 }
 
 * {
@@ -29,9 +29,9 @@ body {
   min-height: 100vh;
   margin: 0;
   background:
-    radial-gradient(circle at 16% 18%, color-mix(in srgb, var(--accent-one), transparent 62%), transparent 30rem),
+    radial-gradient(circle at 16% 18%, color-mix(in srgb, var(--accent-three), transparent 54%), transparent 30rem),
     radial-gradient(circle at 84% 8%, color-mix(in srgb, var(--accent-two), transparent 58%), transparent 31rem),
-    radial-gradient(circle at 76% 86%, color-mix(in srgb, var(--accent-four), transparent 65%), transparent 34rem),
+    radial-gradient(circle at 76% 86%, color-mix(in srgb, var(--accent-four), transparent 68%), transparent 34rem),
     var(--bg);
   color: var(--ink);
   font-family: "Inter", "Segoe UI", sans-serif;
