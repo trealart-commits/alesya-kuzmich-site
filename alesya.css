@@ -494,15 +494,36 @@ h1 {
   overflow: hidden;
   cursor: ew-resize;
   perspective: 1200px;
-  mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+  min-height: 470px;
+}
+
+.diploma-carousel::before,
+.diploma-carousel::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 2;
+  width: min(110px, 12vw);
+  pointer-events: none;
+}
+
+.diploma-carousel::before {
+  left: 0;
+  background: linear-gradient(90deg, var(--surface-strong), transparent);
+}
+
+.diploma-carousel::after {
+  right: 0;
+  background: linear-gradient(270deg, var(--surface-strong), transparent);
 }
 
 .diploma-track {
   display: flex;
-  gap: clamp(14px, 2vw, 24px);
+  gap: clamp(18px, 2.2vw, 30px);
   align-items: center;
   width: max-content;
-  min-height: 430px;
+  min-height: 460px;
   will-change: transform;
 }
 
@@ -510,29 +531,33 @@ h1 {
   display: grid;
   place-items: center;
   flex: 0 0 auto;
-  height: min(390px, 58vw);
+  width: 292px;
+  height: 410px;
   border: 0;
   border-radius: 6px;
   background: transparent;
   box-shadow: 0 18px 38px color-mix(in srgb, var(--shadow), transparent 18%);
   text-decoration: none;
-  transform: rotateY(-8deg) translateZ(0);
+  transform: rotateY(0deg) translateY(0) translateZ(0);
   transform-origin: center;
-  transition: transform 220ms ease, filter 220ms ease;
+  transition: filter 220ms ease;
+  will-change: transform;
 }
 
 .diploma-card:hover {
   filter: saturate(1.08);
-  transform: rotateY(0deg) translateY(-6px) scale(1.02);
 }
 
 .diploma-card-wide {
-  height: min(330px, 52vw);
+  width: 560px;
+  height: 324px;
 }
 
 .diploma-card img {
   width: auto;
-  height: 100%;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
   border-radius: 6px;
   object-fit: contain;
   background: transparent;
@@ -874,14 +899,16 @@ h1 {
   }
 
   .diploma-track {
-    min-height: 320px;
+    min-height: 330px;
   }
 
   .diploma-card {
+    width: 220px;
     height: 310px;
   }
 
   .diploma-card-wide {
+    width: 330px;
     height: 230px;
   }
 
