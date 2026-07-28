@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Алеся Кузьмич — направление</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="alesya.css" />
+    <script defer src="alisa-direction.js"></script>
+  </head>
+  <body>
+    <main class="detail-shell">
+      <a class="back-link" href="index.html">Назад</a>
+
+      <section class="detail-hero">
+        <div>
+          <p class="stub-kicker">Алеся Кузьмич</p>
+          <h1 data-field="title">Направление</h1>
+          <p class="detail-lead" data-field="lead"></p>
+        </div>
+        <img
+          class="detail-portrait"
+          src="assets/alesya/portrait-editorial.png"
+          alt="Портрет Алеси Кузьмич"
+        />
+      </section>
+
+      <nav class="section-menu" aria-label="Меню направления">
+        <a class="is-active" href="#description">Описание</a>
+        <a data-field="galleryLink" href="alisa-gallery.html">Галерея</a>
+        <a href="#reviews">Отзывы</a>
+        <a href="#prices">Цены</a>
+      </nav>
+
+      <section class="detail-section" id="description">
+        <p class="section-number">01</p>
+        <h2>Описание</h2>
+        <p data-field="description"></p>
+        <div class="photo-pair">
+          <img src="assets/alesya/portrait-editorial.png" alt="Editorial-портрет Алеси Кузьмич" />
+          <img src="assets/alesya/portrait-original.jpg" alt="Фото Алеси Кузьмич" />
+        </div>
+      </section>
+
+      <section class="detail-section" id="reviews">
+        <p class="section-number">02</p>
+        <h2>Отзывы</h2>
+        <div class="review-grid" data-field="reviews"></div>
+      </section>
+
+      <section class="detail-section" id="prices">
+        <p class="section-number">03</p>
+        <h2>Цены</h2>
+        <div class="price-grid" data-field="prices"></div>
+      </section>
+    </main>
+  </body>
+</html>

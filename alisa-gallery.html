@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Алеся Кузьмич — галерея</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="alesya.css" />
+    <script defer src="alisa-direction.js"></script>
+  </head>
+  <body data-page="gallery">
+    <main class="detail-shell">
+      <a class="back-link" data-field="backToDirection" href="alisa-direction.html">Назад</a>
+
+      <section class="gallery-hero">
+        <p class="stub-kicker">Галерея</p>
+        <h1 data-field="title">Направление</h1>
+        <p class="detail-lead">Фото и видео для этого направления.</p>
+      </section>
+
+      <nav class="section-menu" aria-label="Меню направления">
+        <a data-field="descriptionLink" href="alisa-direction.html">Описание</a>
+        <a class="is-active" href="#">Галерея</a>
+        <a data-field="reviewsLink" href="alisa-direction.html#reviews">Отзывы</a>
+        <a data-field="pricesLink" href="alisa-direction.html#prices">Цены</a>
+      </nav>
+
+      <section class="gallery-grid" aria-label="Фото и видео">
+        <figure>
+          <img src="assets/alesya/portrait-editorial.png" alt="Портрет Алеси Кузьмич" />
+          <figcaption>Фото 01</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/alesya/portrait-original.jpg" alt="Фото Алеси Кузьмич" />
+          <figcaption>Фото 02</figcaption>
+        </figure>
+        <figure class="video-tile">
+          <span>Видео 01</span>
+        </figure>
+        <figure class="video-tile">
+          <span>Видео 02</span>
+        </figure>
+      </section>
+    </main>
+  </body>
+</html>
