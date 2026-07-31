@@ -716,6 +716,140 @@ h1 {
   line-height: 1.7;
 }
 
+.neuro-content {
+  display: grid;
+  gap: 14px;
+  margin-top: 24px;
+}
+
+.neuro-intro,
+.neuro-section {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(20px, 4vw, 34px);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background:
+    linear-gradient(135deg, color-mix(in srgb, var(--accent-three), transparent 86%), transparent 54%),
+    var(--surface);
+}
+
+.neuro-intro {
+  min-height: 220px;
+  display: grid;
+  align-items: end;
+  background:
+    radial-gradient(circle at 82% 18%, color-mix(in srgb, var(--accent-two), transparent 58%), transparent 13rem),
+    radial-gradient(circle at 14% 84%, color-mix(in srgb, var(--accent-four), transparent 72%), transparent 16rem),
+    var(--surface-strong);
+}
+
+.neuro-intro::after,
+.neuro-sun-card::after {
+  content: "";
+  position: absolute;
+  right: clamp(18px, 4vw, 42px);
+  top: clamp(18px, 4vw, 42px);
+  width: clamp(70px, 12vw, 128px);
+  aspect-ratio: 1;
+  border: 1px solid color-mix(in srgb, var(--accent-three), transparent 42%);
+  border-radius: 50%;
+  box-shadow: 0 0 0 18px color-mix(in srgb, var(--accent-three), transparent 88%);
+  pointer-events: none;
+}
+
+.neuro-content h3 {
+  position: relative;
+  z-index: 1;
+  max-width: 13ch;
+  margin: 0 0 18px;
+  color: var(--ink);
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(2rem, 5vw, 4rem);
+  font-weight: 600;
+  line-height: 0.96;
+}
+
+.neuro-intro h3 {
+  max-width: 12ch;
+  margin: 0;
+  font-size: clamp(3rem, 7vw, 6.4rem);
+}
+
+.neuro-section p,
+.neuro-list li,
+.format-cloud p {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  color: var(--muted);
+  font-size: clamp(1rem, 1.45vw, 1.12rem);
+  line-height: 1.68;
+}
+
+.neuro-section > p + p {
+  margin-top: 14px;
+}
+
+.neuro-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.neuro-grid p,
+.format-cloud p {
+  min-height: 118px;
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background:
+    linear-gradient(90deg, color-mix(in srgb, var(--accent-two), transparent 22%) 0 4px, transparent 4px),
+    rgba(255, 252, 245, 0.72);
+  color: var(--ink);
+}
+
+.neuro-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  margin: 18px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.neuro-list li {
+  min-height: 92px;
+  padding: 16px 18px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: rgba(255, 252, 245, 0.72);
+}
+
+.neuro-list li::before {
+  content: "";
+  display: block;
+  width: 38px;
+  height: 2px;
+  margin-bottom: 16px;
+  background: var(--accent-three);
+}
+
+.neuro-list-two li::before {
+  background: var(--accent-one);
+}
+
+.format-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.format-cloud p {
+  min-height: 74px;
+  flex: 1 1 220px;
+}
+
 .photo-pair,
 .review-grid,
 .price-grid,
@@ -866,6 +1000,11 @@ h1 {
   .gallery-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+
+  .neuro-grid,
+  .neuro-list {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 560px) {
@@ -925,5 +1064,15 @@ h1 {
 
   .video-tile {
     min-height: 240px;
+  }
+
+  .neuro-intro {
+    min-height: 180px;
+  }
+
+  .neuro-grid p,
+  .neuro-list li,
+  .format-cloud p {
+    min-height: auto;
   }
 }
