@@ -205,7 +205,6 @@ const directions = {
           <p>Для тех, кто хочет продолжить практику или подарить её близким, можно заказать подарочные наборы инструментов для практиков и участников. В наличии разные комплектации и стоимость, в зависимости от выбранного набора.</p>
         </section>
 
-        <div class="photo-placeholder">место для фото</div>
       </article>
     `,
     reviews: ["Мягко, структурно и очень красиво.", "Формат легко зашёл всей группе."],
@@ -245,7 +244,15 @@ document.querySelectorAll("[data-field]").forEach((element) => {
   }
 
   if (field === "photoPair") {
-    element.hidden = Boolean(data.richContent);
+    if (key === "workshops") {
+      element.innerHTML = `
+        <div class="photo-placeholder">место для фото</div>
+        <div class="photo-placeholder">место для фото</div>
+      `;
+      element.hidden = false;
+    } else {
+      element.hidden = Boolean(data.richContent);
+    }
   }
 
   if (field === "galleryLink") {

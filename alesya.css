@@ -939,6 +939,11 @@ h1 {
   text-transform: uppercase;
 }
 
+.photo-pair .photo-placeholder {
+  width: 100%;
+  margin: 0;
+}
+
 .mystery-title {
   max-width: none;
   font-size: clamp(1.28rem, 4.6vw, 3rem);
