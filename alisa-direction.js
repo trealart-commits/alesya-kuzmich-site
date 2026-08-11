@@ -307,4 +307,18 @@ if (key === "workshops" && document.body.dataset.page !== "gallery") {
     coverNav.append(backLink, sectionMenu);
     hero.prepend(coverNav);
   }
+
+  const canHover = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+
+  if (canHover) {
+    document.querySelectorAll(".reveal-card").forEach((card) => {
+      card.addEventListener("mouseenter", () => {
+        card.open = true;
+      });
+
+      card.addEventListener("mouseleave", () => {
+        card.open = false;
+      });
+    });
+  }
 }
