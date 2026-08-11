@@ -921,6 +921,24 @@ h1 {
   white-space: nowrap;
 }
 
+.photo-placeholder {
+  display: grid;
+  place-items: center;
+  width: min(100%, 420px);
+  aspect-ratio: 1;
+  margin: clamp(18px, 3vw, 32px) auto 0;
+  border: 1px dashed color-mix(in srgb, var(--accent-three), transparent 30%);
+  border-radius: 8px;
+  background:
+    linear-gradient(135deg, color-mix(in srgb, var(--accent-two), transparent 82%), transparent 56%),
+    rgba(255, 252, 245, 0.64);
+  color: var(--muted);
+  font-size: 0.82rem;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
 .mystery-title {
   max-width: none;
   font-size: clamp(1.28rem, 4.6vw, 3rem);
