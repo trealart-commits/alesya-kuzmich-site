@@ -777,6 +777,22 @@ h1 {
   font-size: clamp(1.9rem, 3.8vw, 3.45rem);
 }
 
+.mystery-title {
+  max-width: none;
+  font-size: clamp(1.28rem, 4.6vw, 3rem);
+  line-height: 1.03;
+}
+
+.mystery-title span {
+  display: block;
+  white-space: nowrap;
+}
+
+.mystery-title + p {
+  max-width: 34rem;
+  text-wrap: balance;
+}
+
 .neuro-section p,
 .neuro-list li,
 .format-cloud p {
@@ -1092,6 +1108,10 @@ h1 {
 
   .neuro-intro {
     min-height: 180px;
+  }
+
+  .mystery-title {
+    font-size: clamp(1.08rem, 5.1vw, 1.45rem);
   }
 
   .neuro-grid p,

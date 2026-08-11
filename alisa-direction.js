@@ -123,7 +123,10 @@ const directions = {
     richContent: `
       <article class="neuro-content mystery-content">
         <section class="neuro-intro mystery-intro">
-          <h3>Мастер-класс «Мистерия ресурсного расслабления»</h3>
+          <h3 class="mystery-title">
+            <span>Мастер-класс</span>
+            <span>«Мистерия ресурсного расслабления»</span>
+          </h3>
           <p>Искусство Глубокой Релаксации, Осознанного Выбора и Гармоничного Взаимодействия.</p>
         </section>
 
@@ -258,3 +261,26 @@ document.querySelectorAll("[data-field]").forEach((element) => {
     element.innerHTML = data.prices.map((price) => `<article>${price}</article>`).join("");
   }
 });
+
+const shortWordsPattern =
+  /(^|[\s([{"'«„“])((?:а|в|во|и|к|ко|о|об|обо|с|со|у|на|не|но|от|до|за|из|по|при|для|над|под|про|без|как|или|что))\s+/giu;
+
+const protectHangingWords = (root) => {
+  const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
+  const textNodes = [];
+
+  while (walker.nextNode()) {
+    const node = walker.currentNode;
+    const parentName = node.parentElement?.tagName;
+
+    if (parentName !== "SCRIPT" && parentName !== "STYLE") {
+      textNodes.push(node);
+    }
+  }
+
+  textNodes.forEach((node) => {
+    node.nodeValue = node.nodeValue.replace(shortWordsPattern, "$1$2\u00a0");
+  });
+};
+
+protectHangingWords(document.body);
