@@ -952,8 +952,14 @@ h1 {
   gap: clamp(14px, 2vw, 22px);
 }
 
+.reveal-grid {
+  gap: clamp(18px, 2.6vw, 30px);
+  align-items: start;
+}
+
 .neuro-grid p,
-.format-cloud p {
+.format-cloud p,
+.reveal-card {
   min-height: 118px;
   padding: clamp(18px, 2.4vw, 24px);
   border: 1px solid var(--line);
@@ -965,7 +971,8 @@ h1 {
 }
 
 .neuro-grid strong,
-.format-cloud strong {
+.format-cloud strong,
+.reveal-card strong {
   display: block;
   margin-bottom: 10px;
   color: var(--ink);
@@ -973,6 +980,88 @@ h1 {
   font-size: clamp(1.22rem, 1.9vw, 1.58rem);
   font-weight: 700;
   line-height: 1.05;
+}
+
+.reveal-card {
+  overflow: hidden;
+  transition:
+    border-color 220ms ease,
+    box-shadow 220ms ease,
+    transform 220ms ease;
+}
+
+.reveal-card:hover,
+.reveal-card:focus-within,
+.reveal-card[open] {
+  border-color: color-mix(in srgb, var(--accent-three), transparent 42%);
+  box-shadow: 0 14px 34px color-mix(in srgb, var(--shadow), transparent 58%);
+}
+
+.reveal-card summary {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  cursor: pointer;
+  list-style: none;
+}
+
+.reveal-card summary::-webkit-details-marker {
+  display: none;
+}
+
+.reveal-card summary::after {
+  content: "";
+  flex: 0 0 auto;
+  width: 10px;
+  height: 10px;
+  margin-top: 0.34em;
+  border-right: 2px solid var(--accent-three);
+  border-bottom: 2px solid var(--accent-three);
+  transform: rotate(45deg);
+  transition: transform 220ms ease;
+}
+
+.reveal-card summary strong {
+  margin-bottom: 0;
+}
+
+.reveal-text {
+  max-height: 0;
+  margin-top: 0;
+  overflow: hidden;
+  color: var(--muted);
+  font-size: clamp(0.98rem, 1.35vw, 1.08rem);
+  line-height: 1.62;
+  opacity: 0;
+  transition:
+    max-height 260ms ease,
+    margin-top 220ms ease,
+    opacity 220ms ease;
+}
+
+.reveal-card[open] .reveal-text {
+  max-height: 260px;
+  margin-top: 14px;
+  opacity: 1;
+}
+
+.reveal-card[open] summary::after {
+  transform: translateY(4px) rotate(225deg);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .reveal-card:hover .reveal-text,
+  .reveal-card:focus-within .reveal-text {
+    max-height: 260px;
+    margin-top: 14px;
+    opacity: 1;
+  }
+
+  .reveal-card:hover summary::after,
+  .reveal-card:focus-within summary::after {
+    transform: translateY(4px) rotate(225deg);
+  }
 }
 
 .mystery-intro {
