@@ -631,19 +631,22 @@ h1 {
 
 .detail-hero {
   display: grid;
-  grid-template-columns: minmax(0, 0.92fr) minmax(240px, 320px);
-  gap: 24px;
+  grid-template-columns: minmax(0, 1.08fr) minmax(220px, 300px);
+  gap: clamp(24px, 4vw, 42px);
   align-items: end;
   padding: clamp(24px, 5vw, 54px);
 }
 
 .detail-hero h1,
 .gallery-hero h1 {
-  max-width: 11ch;
+  max-width: 18ch;
   margin: 0;
-  overflow-wrap: anywhere;
-  font-size: clamp(2.8rem, 5.6vw, 5.25rem);
-  line-height: 0.92;
+  overflow-wrap: normal;
+  word-break: normal;
+  hyphens: none;
+  text-wrap: balance;
+  font-size: clamp(2.15rem, 4.2vw, 3.85rem);
+  line-height: 1.02;
 }
 
 .detail-lead {
@@ -698,7 +701,7 @@ h1 {
 
 .detail-section h2 {
   margin: 0 0 14px;
-  font-size: clamp(1.9rem, 4vw, 3.35rem);
+  font-size: clamp(1.65rem, 3.3vw, 2.75rem);
   line-height: 1;
 }
 
@@ -712,7 +715,7 @@ h1 {
 
 .neuro-content {
   display: grid;
-  gap: 14px;
+  gap: clamp(18px, 2.4vw, 26px);
   margin-top: 24px;
 }
 
@@ -755,19 +758,23 @@ h1 {
 .neuro-content h3 {
   position: relative;
   z-index: 1;
-  max-width: 13ch;
+  max-width: 18ch;
   margin: 0 0 18px;
   color: var(--ink);
   font-family: "Cormorant Garamond", Georgia, serif;
-  font-size: clamp(1.75rem, 3.8vw, 3.2rem);
+  font-size: clamp(1.5rem, 3vw, 2.55rem);
   font-weight: 600;
-  line-height: 0.96;
+  line-height: 1.02;
+  overflow-wrap: normal;
+  word-break: normal;
+  hyphens: none;
+  text-wrap: balance;
 }
 
 .neuro-intro h3 {
-  max-width: 12ch;
+  max-width: 20ch;
   margin: 0;
-  font-size: clamp(2.45rem, 5.2vw, 4.85rem);
+  font-size: clamp(1.9rem, 3.8vw, 3.45rem);
 }
 
 .neuro-section p,
@@ -788,13 +795,13 @@ h1 {
 .neuro-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 10px;
+  gap: clamp(14px, 2vw, 22px);
 }
 
 .neuro-grid p,
 .format-cloud p {
   min-height: 118px;
-  padding: 18px;
+  padding: clamp(18px, 2.4vw, 24px);
   border: 1px solid var(--line);
   border-radius: 8px;
   background:
@@ -809,9 +816,9 @@ h1 {
   margin-bottom: 10px;
   color: var(--ink);
   font-family: "Cormorant Garamond", Georgia, serif;
-  font-size: clamp(1.35rem, 2.2vw, 1.8rem);
+  font-size: clamp(1.22rem, 1.9vw, 1.58rem);
   font-weight: 700;
-  line-height: 1;
+  line-height: 1.05;
 }
 
 .mystery-intro {
@@ -829,7 +836,7 @@ h1 {
 .neuro-list {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 10px;
+  gap: clamp(14px, 2vw, 22px);
   margin: 18px 0 0;
   padding: 0;
   list-style: none;
@@ -837,7 +844,7 @@ h1 {
 
 .neuro-list li {
   min-height: 92px;
-  padding: 16px 18px;
+  padding: clamp(18px, 2.2vw, 24px);
   border: 1px solid var(--line);
   border-radius: 8px;
   background: rgba(255, 252, 245, 0.72);
@@ -859,7 +866,7 @@ h1 {
 .format-cloud {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: clamp(14px, 2vw, 22px);
 }
 
 .format-cloud p {
