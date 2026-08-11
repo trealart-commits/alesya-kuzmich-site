@@ -635,6 +635,10 @@ h1 {
   margin-top: 18px;
 }
 
+[data-direction="workshops"] #description > h2 {
+  display: none;
+}
+
 .detail-hero,
 .gallery-hero,
 .detail-section,
@@ -682,11 +686,66 @@ h1 {
   align-items: start;
   justify-items: center;
   overflow: hidden;
-  padding: clamp(52px, 7vw, 96px) max(18px, env(safe-area-inset-left));
+  padding: clamp(18px, 3vw, 30px) max(18px, env(safe-area-inset-left)) clamp(52px, 7vw, 96px);
   text-align: center;
   background:
     linear-gradient(180deg, rgba(35, 18, 8, 0.58), rgba(35, 18, 8, 0.38) 44%, rgba(35, 18, 8, 0.66)),
     url("assets/alesya/portrait-editorial.png") center 36% / cover no-repeat;
+  box-shadow: none;
+}
+
+[data-direction="workshops"] .cover-nav {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  width: min(100%, 1180px);
+  margin-bottom: clamp(42px, 8vw, 92px);
+}
+
+[data-direction="workshops"] .cover-nav .back-link {
+  width: auto;
+  min-height: 38px;
+  margin: 0;
+  border-color: rgba(255, 250, 240, 0.32);
+  background: rgba(255, 250, 240, 0.08);
+  color: #fffaf0;
+  box-shadow: none;
+  backdrop-filter: blur(10px);
+}
+
+[data-direction="workshops"] .cover-nav .section-menu {
+  position: static;
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  width: auto;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+[data-direction="workshops"] .cover-nav .section-menu a {
+  min-height: 38px;
+  padding: 0 14px;
+  border: 1px solid rgba(255, 250, 240, 0.22);
+  background: rgba(255, 250, 240, 0.08);
+  color: rgba(255, 250, 240, 0.86);
+  backdrop-filter: blur(10px);
+}
+
+[data-direction="workshops"] .cover-nav .section-menu a.is-active {
+  background: rgba(255, 250, 240, 0.18);
+  color: #fffaf0;
+}
+
+[data-direction="workshops"] .mystery-opening {
+  padding: 0;
+  border: 0;
+  background: transparent;
   box-shadow: none;
 }
 
@@ -1196,6 +1255,21 @@ h1 {
   [data-direction="workshops"] .detail-hero {
     min-height: 460px;
     padding-inline: 14px;
+  }
+
+  [data-direction="workshops"] .cover-nav {
+    flex-wrap: wrap;
+    margin-bottom: 54px;
+  }
+
+  [data-direction="workshops"] .cover-nav .section-menu {
+    flex-basis: 100%;
+    justify-content: stretch;
+  }
+
+  [data-direction="workshops"] .cover-nav .section-menu a {
+    flex: 1 1 42%;
+    padding: 0 10px;
   }
 
   [data-direction="workshops"] .detail-hero h1 {

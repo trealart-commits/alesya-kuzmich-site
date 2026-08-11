@@ -123,7 +123,7 @@ const directions = {
       "Авторский мастер-класс для глубокого расслабления, бережного контакта и восстановления внутреннего ресурса.",
     richContent: `
       <article class="neuro-content mystery-content">
-        <section class="neuro-section">
+        <section class="neuro-section mystery-opening">
           <p>В сумасшедшем ритме современного мира мы часто забываем о главном — о себе, о своём внутреннем покое и гармонии. Приглашаю вас в удивительное путешествие, где время замедляется, а заботы и стресс растворяются под чутким и нежным прикосновением, открывая новые грани контакта с собой, с миром и друг с другом.</p>
         </section>
 
@@ -277,3 +277,16 @@ const protectHangingWords = (root) => {
 };
 
 protectHangingWords(document.body);
+
+if (key === "workshops" && document.body.dataset.page !== "gallery") {
+  const hero = document.querySelector(".detail-hero");
+  const backLink = document.querySelector(".back-link");
+  const sectionMenu = document.querySelector(".section-menu");
+
+  if (hero && backLink && sectionMenu) {
+    const coverNav = document.createElement("div");
+    coverNav.className = "cover-nav";
+    coverNav.append(backLink, sectionMenu);
+    hero.prepend(coverNav);
+  }
+}
