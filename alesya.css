@@ -649,6 +649,57 @@ h1 {
   line-height: 1.02;
 }
 
+.detail-hero h1 span {
+  display: block;
+}
+
+[data-direction="workshops"] .detail-hero {
+  position: relative;
+  min-height: clamp(420px, 58vw, 620px);
+  grid-template-columns: 1fr;
+  align-items: start;
+  justify-items: center;
+  overflow: hidden;
+  padding: clamp(34px, 6vw, 70px);
+  text-align: center;
+  background:
+    linear-gradient(180deg, rgba(35, 18, 8, 0.58), rgba(35, 18, 8, 0.38) 44%, rgba(35, 18, 8, 0.66)),
+    url("assets/alesya/portrait-editorial.png") center 36% / cover no-repeat;
+}
+
+[data-direction="workshops"] .detail-hero > div {
+  position: relative;
+  z-index: 1;
+  width: min(100%, 980px);
+}
+
+[data-direction="workshops"] .detail-hero h1 {
+  max-width: none;
+  color: #fffaf0;
+  text-shadow: 0 10px 28px rgba(35, 18, 8, 0.42);
+  font-size: clamp(1.95rem, 5vw, 4.15rem);
+  line-height: 0.98;
+}
+
+[data-direction="workshops"] .detail-hero h1 span {
+  white-space: nowrap;
+}
+
+[data-direction="workshops"] .detail-lead {
+  max-width: 46rem;
+  margin-inline: auto;
+  color: rgba(255, 250, 240, 0.88);
+  text-shadow: 0 8px 22px rgba(35, 18, 8, 0.34);
+}
+
+[data-direction="workshops"] .stub-kicker {
+  color: rgba(255, 250, 240, 0.78);
+}
+
+[data-direction="workshops"] .detail-portrait {
+  display: none;
+}
+
 .detail-lead {
   max-width: 38rem;
   margin: 20px 0 0;
@@ -1112,6 +1163,15 @@ h1 {
 
   .mystery-title {
     font-size: clamp(1.08rem, 5.1vw, 1.45rem);
+  }
+
+  [data-direction="workshops"] .detail-hero {
+    min-height: 420px;
+    padding-inline: 16px;
+  }
+
+  [data-direction="workshops"] .detail-hero h1 {
+    font-size: clamp(1.08rem, 4.9vw, 1.52rem);
   }
 
   .neuro-grid p,

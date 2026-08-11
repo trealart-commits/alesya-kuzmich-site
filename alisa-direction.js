@@ -117,6 +117,7 @@ const directions = {
   },
   workshops: {
     title: "Мастер-класс «Мистерия ресурсного расслабления»",
+    titleHtml: "<span>Мастер-класс</span><span>«Мистерия ресурсного расслабления»</span>",
     lead: "Искусство глубокой релаксации, осознанного выбора и гармоничного взаимодействия.",
     description:
       "Авторский мастер-класс для глубокого расслабления, бережного контакта и восстановления внутреннего ресурса.",
@@ -209,12 +210,13 @@ const directionUrl = `alisa-direction.html?d=${key}`;
 const galleryUrl = `alisa-gallery.html?d=${key}`;
 
 document.title = `Алеся Кузьмич — ${data.title}${document.body.dataset.page === "gallery" ? " — галерея" : ""}`;
+document.body.dataset.direction = key;
 
 document.querySelectorAll("[data-field]").forEach((element) => {
   const field = element.dataset.field;
 
   if (field === "title") {
-    element.textContent = data.title;
+    element.innerHTML = data.titleHtml || data.title;
   }
 
   if (field === "lead") {
