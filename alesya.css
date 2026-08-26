@@ -753,7 +753,7 @@ h1 {
   position: relative;
   z-index: 1;
   width: min(100%, 980px);
-  transform: translateY(clamp(-170px, -9vw, -96px));
+  transform: translateY(clamp(-190px, -10vw, -116px));
 }
 
 [data-direction="workshops"] .detail-hero h1 {
@@ -1404,7 +1404,7 @@ h1 {
   }
 
   [data-direction="workshops"] .detail-hero > div {
-    transform: translateY(-54px);
+    transform: translateY(-66px);
   }
 
   .neuro-grid p,
