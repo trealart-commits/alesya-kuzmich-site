@@ -313,10 +313,9 @@ document.querySelectorAll("[data-field]").forEach((element) => {
 
     element.innerHTML = gallery
       .map(
-        (item, index) => `
+        (item) => `
           <figure>
             <img src="${item.src}" alt="${item.alt}" />
-            <figcaption>Фото ${String(index + 1).padStart(2, "0")}</figcaption>
           </figure>
         `,
       )
