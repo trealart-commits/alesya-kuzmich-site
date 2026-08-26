@@ -701,7 +701,7 @@ h1 {
   align-items: center;
   gap: 14px;
   width: min(100%, 1180px);
-  margin-bottom: clamp(42px, 8vw, 92px);
+  margin-bottom: clamp(16px, 4.8vw, 48px);
 }
 
 [data-direction="workshops"] .cover-nav .back-link {
@@ -1385,7 +1385,7 @@ h1 {
 
   [data-direction="workshops"] .cover-nav {
     flex-wrap: wrap;
-    margin-bottom: 54px;
+    margin-bottom: 32px;
   }
 
   [data-direction="workshops"] .cover-nav .section-menu {
