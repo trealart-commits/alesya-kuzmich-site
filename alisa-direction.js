@@ -209,6 +209,24 @@ const directions = {
     `,
     reviews: ["Мягко, структурно и очень красиво.", "Формат легко зашёл всей группе."],
     prices: ["Открытый мастер-класс — цена уточняется", "Закрытая группа — по запросу"],
+    gallery: [
+      {
+        src: "assets/alesya/workshops/gallery-01.jpg",
+        alt: "Мастер-класс с кисточками в камерном пространстве",
+      },
+      {
+        src: "assets/alesya/workshops/gallery-02.jpg",
+        alt: "Практика нейро-тактильного расслабления",
+      },
+      {
+        src: "assets/alesya/workshops/gallery-03.jpg",
+        alt: "Групповой мастер-класс ресурсного расслабления",
+      },
+      {
+        src: "assets/alesya/workshops/gallery-04.jpg",
+        alt: "Мистерия ресурсного расслабления на мероприятии",
+      },
+    ],
   },
 };
 
@@ -279,6 +297,30 @@ document.querySelectorAll("[data-field]").forEach((element) => {
 
   if (field === "prices") {
     element.innerHTML = data.prices.map((price) => `<article>${price}</article>`).join("");
+  }
+
+  if (field === "gallery") {
+    const gallery = data.gallery || [
+      {
+        src: "assets/alesya/portrait-editorial.png",
+        alt: "Портрет Алеси Кузьмич",
+      },
+      {
+        src: "assets/alesya/portrait-original.jpg",
+        alt: "Фото Алеси Кузьмич",
+      },
+    ];
+
+    element.innerHTML = gallery
+      .map(
+        (item, index) => `
+          <figure>
+            <img src="${item.src}" alt="${item.alt}" />
+            <figcaption>Фото ${String(index + 1).padStart(2, "0")}</figcaption>
+          </figure>
+        `,
+      )
+      .join("");
   }
 });
 
