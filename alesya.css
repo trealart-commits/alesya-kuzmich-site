@@ -621,6 +621,7 @@ h1 {
 [data-direction="workshops"] .detail-shell {
   width: 100%;
   padding-top: 0;
+  scroll-padding-top: 88px;
 }
 
 [data-direction="workshops"] .back-link,
@@ -695,11 +696,11 @@ h1 {
 }
 
 [data-direction="workshops"] .cover-nav {
-  position: absolute;
-  top: clamp(18px, 3vw, 30px);
+  position: fixed;
+  top: 10px;
   left: 50%;
   transform: translateX(-50%);
-  z-index: 2;
+  z-index: 40;
   display: flex;
   align-items: center;
   gap: 14px;
@@ -1196,6 +1197,16 @@ h1 {
 .gallery-grid figure {
   overflow: hidden;
   margin: 0;
+}
+
+.inline-gallery {
+  scroll-margin-top: 92px;
+}
+
+.inline-gallery figure {
+  border: 0;
+  background: transparent;
+  box-shadow: none;
 }
 
 .gallery-grid figcaption,

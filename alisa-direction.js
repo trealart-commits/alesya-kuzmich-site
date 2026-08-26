@@ -235,7 +235,7 @@ const params = new URLSearchParams(window.location.search);
 const key = directions[params.get("d")] ? params.get("d") : fallbackKey;
 const data = directions[key];
 const directionUrl = `alisa-direction.html?d=${key}`;
-const galleryUrl = `alisa-gallery.html?d=${key}`;
+const galleryUrl = key === "workshops" ? "#gallery" : `alisa-gallery.html?d=${key}`;
 
 document.title = `Алеся Кузьмич — ${data.title}${document.body.dataset.page === "gallery" ? " — галерея" : ""}`;
 document.body.dataset.direction = key;
@@ -263,10 +263,18 @@ document.querySelectorAll("[data-field]").forEach((element) => {
 
   if (field === "photoPair") {
     if (key === "workshops") {
-      element.innerHTML = `
-        <div class="photo-placeholder">место для фото</div>
-        <div class="photo-placeholder">место для фото</div>
-      `;
+      element.id = "gallery";
+      element.className = "gallery-grid inline-gallery";
+      element.setAttribute("aria-label", "Галерея мастер-класса");
+      element.innerHTML = data.gallery
+        .map(
+          (item) => `
+            <figure>
+              <img src="${item.src}" alt="${item.alt}" />
+            </figure>
+          `,
+        )
+        .join("");
       element.hidden = false;
     } else {
       element.hidden = Boolean(data.richContent);
