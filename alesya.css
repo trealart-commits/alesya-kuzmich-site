@@ -695,13 +695,16 @@ h1 {
 }
 
 [data-direction="workshops"] .cover-nav {
-  position: relative;
+  position: absolute;
+  top: clamp(18px, 3vw, 30px);
+  left: 50%;
+  transform: translateX(-50%);
   z-index: 2;
   display: flex;
   align-items: center;
   gap: 14px;
-  width: min(100%, 1180px);
-  margin-bottom: clamp(4px, 1.8vw, 18px);
+  width: min(calc(100% - 36px), 1180px);
+  margin-bottom: 0;
 }
 
 [data-direction="workshops"] .cover-nav .back-link {
@@ -750,10 +753,12 @@ h1 {
 }
 
 [data-direction="workshops"] .detail-hero > div {
-  position: relative;
+  position: absolute;
+  top: clamp(112px, 11vw, 164px);
+  left: 50%;
   z-index: 1;
   width: min(100%, 980px);
-  transform: translateY(clamp(-190px, -10vw, -116px));
+  transform: translateX(-50%);
 }
 
 [data-direction="workshops"] .detail-hero h1 {
@@ -1386,7 +1391,7 @@ h1 {
 
   [data-direction="workshops"] .cover-nav {
     flex-wrap: wrap;
-    margin-bottom: 18px;
+    top: 14px;
   }
 
   [data-direction="workshops"] .cover-nav .section-menu {
@@ -1404,7 +1409,8 @@ h1 {
   }
 
   [data-direction="workshops"] .detail-hero > div {
-    transform: translateY(-66px);
+    top: 138px;
+    transform: translateX(-50%);
   }
 
   .neuro-grid p,
