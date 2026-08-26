@@ -690,7 +690,7 @@ h1 {
   text-align: center;
   background:
     linear-gradient(180deg, rgba(35, 18, 8, 0.58), rgba(35, 18, 8, 0.38) 44%, rgba(35, 18, 8, 0.66)),
-    url("assets/alesya/portrait-editorial.png") center 36% / cover no-repeat;
+    url("assets/alesya/workshop-cover.jpg") center 36% / cover no-repeat;
   box-shadow: none;
 }
 
