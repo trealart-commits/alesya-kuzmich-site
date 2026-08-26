@@ -701,7 +701,7 @@ h1 {
   align-items: center;
   gap: 14px;
   width: min(100%, 1180px);
-  margin-bottom: clamp(16px, 4.8vw, 48px);
+  margin-bottom: clamp(4px, 1.8vw, 18px);
 }
 
 [data-direction="workshops"] .cover-nav .back-link {
@@ -753,6 +753,7 @@ h1 {
   position: relative;
   z-index: 1;
   width: min(100%, 980px);
+  transform: translateY(clamp(-170px, -9vw, -96px));
 }
 
 [data-direction="workshops"] .detail-hero h1 {
@@ -1385,7 +1386,7 @@ h1 {
 
   [data-direction="workshops"] .cover-nav {
     flex-wrap: wrap;
-    margin-bottom: 32px;
+    margin-bottom: 18px;
   }
 
   [data-direction="workshops"] .cover-nav .section-menu {
@@ -1400,6 +1401,10 @@ h1 {
 
   [data-direction="workshops"] .detail-hero h1 {
     font-size: clamp(1.2rem, 6vw, 1.7rem);
+  }
+
+  [data-direction="workshops"] .detail-hero > div {
+    transform: translateY(-54px);
   }
 
   .neuro-grid p,
