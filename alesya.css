@@ -752,9 +752,9 @@ h1 {
   box-shadow: none;
 }
 
-[data-direction="workshops"] .detail-hero > div {
+[data-direction="workshops"] .detail-hero > div:not(.cover-nav) {
   position: absolute;
-  top: clamp(112px, 11vw, 164px);
+  top: clamp(88px, 7.2vw, 126px);
   left: 50%;
   z-index: 1;
   width: min(100%, 980px);
@@ -1408,8 +1408,8 @@ h1 {
     font-size: clamp(1.2rem, 6vw, 1.7rem);
   }
 
-  [data-direction="workshops"] .detail-hero > div {
-    top: 138px;
+  [data-direction="workshops"] .detail-hero > div:not(.cover-nav) {
+    top: 118px;
     transform: translateX(-50%);
   }
 
