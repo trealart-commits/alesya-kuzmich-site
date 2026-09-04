@@ -1,11 +1,128 @@
 const directions = {
   aura: {
-    title: "Цветотерапия Аура-сома",
-    lead: "Работа с цветом как с мягким языком состояния, выбора и внутреннего ресурса.",
+    title: "Цветотерапия Aura-Soma",
+    lead: "Диагностика через выбор цвета и практика с живым светом для ясности, ресурса и внутреннего баланса.",
     description:
-      "На встрече цвет становится способом бережно рассмотреть актуальный запрос: что поддерживает, где есть напряжение, какой ресурс уже рядом. Формат можно развить в личную консультацию, красивый ритуал или камерную практику для события.",
-    reviews: ["Очень тонкая и красивая встреча.", "После сессии стало спокойнее и яснее."],
-    prices: ["Личная сессия — цена уточняется", "Формат для события — по запросу"],
+      "На встрече цвет становится способом бережно рассмотреть актуальный запрос: что поддерживает, где есть напряжение, какой ресурс уже рядом.",
+    richContent: `
+      <article class="neuro-content aura-content">
+        <section class="neuro-section mystery-opening">
+          <p>Aura-Soma и Beamer Light Pen — это работа с цветом как с языком состояния. Вы выбираете оттенки, которые откликаются именно сейчас, а я помогаю перевести этот выбор в понятный запрос: где нужна поддержка, какой ресурс просится в жизнь и что важно мягко вернуть в баланс.</p>
+        </section>
+
+        <section class="neuro-section neuro-sun-card">
+          <h3>Что это?</h3>
+          <p><strong>Цветотерапия Aura-Soma</strong> — это диалог с вашим бессознательным через живой цвет. Цвет отражает не только настроение, но и более глубокие процессы: потребности, напряжения, внутренний ресурс, неосознанный выбор.</p>
+          <p>В центре сессии — четыре выбранные вами виалы из большой палитры. Этот выбор становится точкой входа: мы видим, какие энергии сейчас важны для баланса, где есть усталость или зажим, а где уже есть сила, на которую можно опереться.</p>
+          <p>Это бережная практика для тех, кто хочет услышать себя яснее, выйти из внутреннего шума и почувствовать состояние, из которого легче принимать решения.</p>
+        </section>
+
+        <section class="neuro-section">
+          <h3>Как работает выбор цвета?</h3>
+          <div class="neuro-grid">
+            <p><strong>Выбор</strong>Вы интуитивно выбираете 4 цвета, которые притягивают внимание именно сейчас.</p>
+            <p><strong>Диагностика</strong>Цветовая палитра помогает проявить актуальный запрос и глубинные потребности.</p>
+            <p><strong>Расшифровка</strong>Я перевожу язык цвета в понятные смыслы: что поддерживает, что просит внимания, куда движется энергия.</p>
+            <p><strong>Настройка</strong>На основе выбора подбирается формат сессии и дальнейшая работа с цветом.</p>
+            <p><strong>Практика</strong>Beamer Light Pen передаёт выбранный цвет через мягкий световой импульс.</p>
+            <p><strong>Интеграция</strong>После практики состояние раскрывается во времени: появляется ясность, тишина и ощущение себя.</p>
+          </div>
+        </section>
+
+        <section class="neuro-section neuro-sun-card">
+          <h3>Beamer Light Pen</h3>
+          <p><strong>Beamer Light Pen</strong> — это инструмент, который работает с цветом как с тонкой настройкой состояния. В специальный световой прибор вставляется выбранная виала, и цвет направляется через точки и меридианы, опираясь на логику восточной системы восстановления.</p>
+          <p>В виалах соединены цветной свет, мелко перемолотые кристаллы, полудрагоценные камни и квинтэссенции растений, подобранные по цвету. За счёт этого практика ощущается не как обычный свет, а как живой цветовой импульс.</p>
+          <p>Я люблю метафору камертона: как камертон помогает инструменту вернуться к чистому звучанию, так цвет помогает телу и психике вспомнить более гармоничное состояние.</p>
+        </section>
+
+        <section class="neuro-section">
+          <h3>Как проходит сессия?</h3>
+          <div class="format-cloud">
+            <p><strong>Знакомство и запрос</strong><br>В начале мы обсуждаем состояние, вопрос или тему, с которой вы приходите.</p>
+            <p><strong>Выбор 4 виал</strong><br>Вы выбираете цвета из палитры, а затем мы смотрим, что этот выбор показывает.</p>
+            <p><strong>Подбор практики</strong><br>По результатам диагностики выстраивается индивидуальный формат работы.</p>
+            <p><strong>Сессия с цветом</strong><br>Я работаю с выбранными цветами через Beamer Light Pen, точки и тонкую анатомию.</p>
+            <p><strong>Завершение</strong><br>После практики мы мягко собираем ощущения, смыслы и то, что важно взять с собой.</p>
+          </div>
+        </section>
+
+        <section class="neuro-section">
+          <h3>С какими запросами приходят?</h3>
+          <ul class="neuro-list neuro-list-two">
+            <li>снять тревогу, напряжение и внутренний шум;</li>
+            <li>вернуть ощущение ресурса, энергии и сил;</li>
+            <li>лучше услышать себя и свои настоящие желания;</li>
+            <li>найти ясность в выборе или сложной ситуации;</li>
+            <li>мягко пройти через страхи, раздражение или усталость;</li>
+            <li>вернуть внутреннюю опору, принятие себя и чувство целостности.</li>
+          </ul>
+        </section>
+
+        <section class="neuro-section">
+          <h3>Что вы можете почувствовать?</h3>
+          <div class="neuro-grid reveal-grid">
+            <details class="reveal-card">
+              <summary><strong>Глубокое расслабление</strong></summary>
+              <div class="reveal-text">Тело перестаёт держать лишнее напряжение, появляется ощущение отдыха, тишины и мягкого выдоха.</div>
+            </details>
+            <details class="reveal-card">
+              <summary><strong>Ясность и ответы</strong></summary>
+              <div class="reveal-text">Когда внутренний шум становится тише, легче увидеть ситуацию с нового угла и услышать собственные ответы.</div>
+            </details>
+            <details class="reveal-card">
+              <summary><strong>Возвращение к себе</strong></summary>
+              <div class="reveal-text">Практика помогает выйти из режима перегруженности и почувствовать контакт с телом, чувствами и выбором.</div>
+            </details>
+            <details class="reveal-card">
+              <summary><strong>Новый фокус</strong></summary>
+              <div class="reveal-text">После сессии может появиться больше собранности, энергии и желания действовать из более спокойного состояния.</div>
+            </details>
+            <details class="reveal-card">
+              <summary><strong>Эмоциональный баланс</strong></summary>
+              <div class="reveal-text">Цветовая работа мягко поддерживает проживание чувств и возвращает ощущение внутреннего порядка.</div>
+            </details>
+            <details class="reveal-card">
+              <summary><strong>Интуитивность</strong></summary>
+              <div class="reveal-text">Через выбор цвета проявляется то, что уже знает тело и бессознательное, но ум ещё не успел сформулировать.</div>
+            </details>
+          </div>
+        </section>
+
+        <section class="neuro-section">
+          <h3>Цвет как подсказка</h3>
+          <div class="color-meaning-grid">
+            <p class="color-card color-card-pink"><strong>Розовый</strong>Нежность, принятие, любовь к себе, умение получать заботу.</p>
+            <p class="color-card color-card-blue"><strong>Синий</strong>Спокойствие, честность, границы, выражение себя и ясный голос.</p>
+            <p class="color-card color-card-yellow"><strong>Жёлтый</strong>Личная сила, радость, собранность, ясность и внутреннее солнце.</p>
+            <p class="color-card color-card-orange"><strong>Оранжевый</strong>Удовольствие, чувственность, харизма, вкус к жизни и целостность.</p>
+          </div>
+        </section>
+
+        <section class="neuro-section neuro-sun-card">
+          <h3>Мой подход</h3>
+          <p>Я работаю интегративно: соединяю цветотерапию, телесную терапию, психологический взгляд и мягкую релаксацию. Поэтому сессия не сводится к разговору “головой” и не ограничивается только красивым ритуалом с цветом.</p>
+          <p>Работа идёт сразу на нескольких уровнях: телесном, эмоциональном, энергетическом и смысловом. Когда меняется состояние, часто по-другому начинают ощущаться решения, люди, желания и собственный путь.</p>
+        </section>
+
+        <section class="neuro-section">
+          <h3>Форматы</h3>
+          <div class="format-cloud">
+            <p><strong>Личная сессия</strong><br>Диагностика по выбранным цветам и практика с Beamer Light Pen.</p>
+            <p><strong>Расширенная сессия</strong><br>Цветотерапия в сочетании с телесной терапией, нейрорелаксацией и консультацией.</p>
+            <p><strong>Формат для события</strong><br>Камерная цветовая практика для ретрита, женского круга или wellness-программы.</p>
+          </div>
+        </section>
+      </article>
+    `,
+    reviews: [
+      "Во время практики неожиданно пришли глубокие ответы на вопросы, хотя до сессии я даже не формулировала запрос.",
+      "Цвета будто активизировали внутренний процесс: многое стало разворачиваться изнутри, без лишних слов.",
+      "Очень советую сессии Aura-Soma и кисточек: у Алеси тонкое чувствование человека и красивый бережный подход.",
+    ],
+    prices: ["Личная сессия с цветом и диагностикой — 4 700", "Большой формат с телесной практикой и консультацией — 8 000"],
+    inlineGallery: true,
+    galleryPlaceholder: true,
   },
   fans: {
     title: "Веера",
@@ -235,7 +352,7 @@ const params = new URLSearchParams(window.location.search);
 const key = directions[params.get("d")] ? params.get("d") : fallbackKey;
 const data = directions[key];
 const directionUrl = `alisa-direction.html?d=${key}`;
-const galleryUrl = key === "workshops" ? "#gallery" : `alisa-gallery.html?d=${key}`;
+const galleryUrl = data.inlineGallery ? "#gallery" : `alisa-gallery.html?d=${key}`;
 
 document.title = `Алеся Кузьмич — ${data.title}${document.body.dataset.page === "gallery" ? " — галерея" : ""}`;
 document.body.dataset.direction = key;
@@ -262,19 +379,23 @@ document.querySelectorAll("[data-field]").forEach((element) => {
   }
 
   if (field === "photoPair") {
-    if (key === "workshops") {
+    if (data.inlineGallery) {
       element.id = "gallery";
-      element.className = "gallery-grid inline-gallery";
-      element.setAttribute("aria-label", "Галерея мастер-класса");
-      element.innerHTML = data.gallery
-        .map(
-          (item) => `
-            <figure>
-              <img src="${item.src}" alt="${item.alt}" />
-            </figure>
-          `,
-        )
-        .join("");
+      element.className = data.galleryPlaceholder
+        ? "gallery-grid inline-gallery gallery-placeholder-grid"
+        : "gallery-grid inline-gallery";
+      element.setAttribute("aria-label", `Галерея: ${data.title}`);
+      element.innerHTML = data.galleryPlaceholder
+        ? Array.from({ length: 4 }, () => `<div class="photo-placeholder">место для фото</div>`).join("")
+        : data.gallery
+            .map(
+              (item) => `
+                <figure>
+                  <img src="${item.src}" alt="${item.alt}" />
+                </figure>
+              `,
+            )
+            .join("");
       element.hidden = false;
     } else {
       element.hidden = Boolean(data.richContent);
@@ -354,18 +475,7 @@ const protectHangingWords = (root) => {
 
 protectHangingWords(document.body);
 
-if (key === "workshops" && document.body.dataset.page !== "gallery") {
-  const hero = document.querySelector(".detail-hero");
-  const backLink = document.querySelector(".back-link");
-  const sectionMenu = document.querySelector(".section-menu");
-
-  if (hero && backLink && sectionMenu) {
-    const coverNav = document.createElement("div");
-    coverNav.className = "cover-nav";
-    coverNav.append(backLink, sectionMenu);
-    hero.prepend(coverNav);
-  }
-
+if (document.body.dataset.page !== "gallery") {
   const canHover = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
 
   if (canHover) {
@@ -379,6 +489,21 @@ if (key === "workshops" && document.body.dataset.page !== "gallery") {
       });
     });
   }
+}
 
-  document.querySelector("#prices")?.setAttribute("hidden", "");
+if (key === "workshops" && document.body.dataset.page !== "gallery") {
+  const hero = document.querySelector(".detail-hero");
+  const backLink = document.querySelector(".back-link");
+  const sectionMenu = document.querySelector(".section-menu");
+
+  if (hero && backLink && sectionMenu) {
+    const coverNav = document.createElement("div");
+    coverNav.className = "cover-nav";
+    coverNav.append(backLink, sectionMenu);
+    hero.prepend(coverNav);
+  }
+
+  if (key === "workshops") {
+    document.querySelector("#prices")?.setAttribute("hidden", "");
+  }
 }

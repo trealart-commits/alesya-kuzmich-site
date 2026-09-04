@@ -1090,6 +1090,57 @@ h1 {
   transform: translateY(4px) rotate(225deg);
 }
 
+.color-meaning-grid {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: clamp(12px, 1.8vw, 18px);
+}
+
+.color-card {
+  min-height: 180px;
+  margin: 0;
+  padding: clamp(18px, 2.2vw, 24px);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  color: var(--ink);
+  font-size: clamp(0.98rem, 1.25vw, 1.08rem);
+  line-height: 1.58;
+}
+
+.color-card strong {
+  display: block;
+  margin-bottom: 12px;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(1.45rem, 2.1vw, 2rem);
+  line-height: 1;
+}
+
+.color-card-pink {
+  background:
+    linear-gradient(180deg, rgba(255, 246, 239, 0.68), rgba(255, 252, 245, 0.86)),
+    linear-gradient(135deg, rgba(225, 80, 82, 0.22), rgba(249, 174, 99, 0.13));
+}
+
+.color-card-blue {
+  background:
+    linear-gradient(180deg, rgba(255, 246, 239, 0.7), rgba(255, 252, 245, 0.88)),
+    linear-gradient(135deg, rgba(51, 145, 212, 0.2), rgba(125, 211, 240, 0.12));
+}
+
+.color-card-yellow {
+  background:
+    linear-gradient(180deg, rgba(255, 246, 239, 0.72), rgba(255, 252, 245, 0.9)),
+    linear-gradient(135deg, rgba(250, 197, 52, 0.3), rgba(224, 128, 43, 0.12));
+}
+
+.color-card-orange {
+  background:
+    linear-gradient(180deg, rgba(255, 246, 239, 0.72), rgba(255, 252, 245, 0.9)),
+    linear-gradient(135deg, rgba(224, 128, 43, 0.28), rgba(225, 80, 82, 0.14));
+}
+
 @media (hover: hover) and (pointer: fine) {
   .reveal-card:hover .reveal-text,
   .reveal-card:focus-within .reveal-text {
@@ -1222,6 +1273,18 @@ h1 {
   border-radius: 0;
 }
 
+.gallery-placeholder-grid {
+  width: min(1040px, calc(100vw - 28px));
+  gap: 12px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.gallery-placeholder-grid .photo-placeholder {
+  width: 100%;
+  margin: 0;
+}
+
 .gallery-grid figcaption,
 .video-tile span {
   display: block;
@@ -1332,7 +1395,8 @@ h1 {
   }
 
   .neuro-grid,
-  .neuro-list {
+  .neuro-list,
+  .color-meaning-grid {
     grid-template-columns: 1fr;
   }
 }
