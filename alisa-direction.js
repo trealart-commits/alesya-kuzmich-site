@@ -2,6 +2,8 @@ const directions = {
   aura: {
     title: "Цветотерапия Aura-Soma",
     lead: "Диагностика через выбор цвета и практика с живым светом для ясности, ресурса и внутреннего баланса.",
+    portrait: "assets/alesya/aura/aura-soma-hero.jpg",
+    portraitAlt: "Сессия Aura-Soma с палитрой цветных виал",
     description:
       "На встрече цвет становится способом бережно рассмотреть актуальный запрос: что поддерживает, где есть напряжение, какой ресурс уже рядом.",
     richContent: `
@@ -366,6 +368,11 @@ document.querySelectorAll("[data-field]").forEach((element) => {
 
   if (field === "lead") {
     element.textContent = data.lead;
+  }
+
+  if (field === "portrait") {
+    element.src = data.portrait || "assets/alesya/portrait-editorial.png";
+    element.alt = data.portraitAlt || "Портрет Алеси Кузьмич";
   }
 
   if (field === "description") {
