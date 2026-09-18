@@ -9,8 +9,8 @@ const directions = {
     richContent: `
       <article class="neuro-content aura-content">
         <section class="neuro-section mystery-opening">
-          <h3 class="wide-heading">Аура-Сома и Лучевая указка</h3>
-          <p><strong>Aura-Soma and Beamer Light Pen</strong> — это работа с цветом как с языком состояния. Вы выбираете цвета и оттенки, которые откликаются именно сейчас, а я помогаю перевести этот выбор в понятный запрос: где нужна поддержка, какой ресурс просится в жизнь и что важно мягко вернуть в баланс.</p>
+          <h3 class="wide-heading">Аура-Сома и Лучевая указка / Aura-Soma and Beamer Light Pen</h3>
+          <p>Это работа с цветом как с языком состояния. Вы выбираете цвета и оттенки, которые откликаются именно сейчас, а я помогаю перевести этот выбор в понятный запрос: где нужна поддержка, какой ресурс просится в жизнь и что важно мягко вернуть в баланс.</p>
         </section>
 
         <section class="neuro-section neuro-sun-card">
