@@ -489,7 +489,7 @@ if (document.body.dataset.page !== "gallery") {
   const canHover = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
 
   if (canHover) {
-    document.querySelectorAll(".reveal-card").forEach((card) => {
+    document.querySelectorAll(".reveal-card, .section-toggle").forEach((card) => {
       card.addEventListener("mouseenter", () => {
         card.open = true;
       });

@@ -1105,6 +1105,20 @@ h1 {
   list-style: none;
 }
 
+.section-toggle {
+  transition:
+    border-color 220ms ease,
+    box-shadow 220ms ease,
+    transform 220ms ease;
+}
+
+.section-toggle:hover,
+.section-toggle:focus-within,
+.section-toggle[open] {
+  border-color: color-mix(in srgb, var(--accent-three), transparent 38%);
+  box-shadow: 0 18px 44px color-mix(in srgb, var(--shadow), transparent 56%);
+}
+
 .section-toggle summary::-webkit-details-marker {
   display: none;
 }
