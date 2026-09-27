@@ -20,7 +20,7 @@ const directions = {
           <p>Это бережная практика для тех, кто хочет услышать себя яснее, выйти из внутреннего шума и почувствовать состояние, из которого легче принимать решения.</p>
         </section>
 
-        <section class="neuro-section">
+        <section class="neuro-section color-prompt-section">
           <h3>Цвет как подсказка</h3>
           <div class="color-meaning-grid">
             <figure class="color-bottle-card">
