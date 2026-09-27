@@ -26,77 +26,77 @@ const directions = {
             <figure class="color-bottle-card">
               <img src="assets/alesya/aura/bottles/01-dark-magenta.png" alt="Виала тёмная маджента" loading="lazy">
               <figcaption>Тёмная маджента</figcaption>
-              <span class="color-description-slot" aria-hidden="true"></span>
+              <span class="color-description-slot">Глубокий цвет внутренней трансформации. Помогает встретиться с теневыми сторонами, переоценить прошлый опыт и обнаружить скрытые дары.</span>
             </figure>
             <figure class="color-bottle-card">
               <img src="assets/alesya/aura/bottles/02-pink.png" alt="Виала розовая" loading="lazy">
               <figcaption>Розовый</figcaption>
-              <span class="color-description-slot" aria-hidden="true"></span>
+              <span class="color-description-slot">Цвет мягкости, принятия и любви к себе. Возвращает нежность, способность получать заботу и строить отношения через тепло.</span>
             </figure>
             <figure class="color-bottle-card">
               <img src="assets/alesya/aura/bottles/03-red.png" alt="Виала красная" loading="lazy">
               <figcaption>Красный</figcaption>
-              <span class="color-description-slot" aria-hidden="true"></span>
+              <span class="color-description-slot">Цвет жизненной силы, энергии и действия. Помогает почувствовать тело, опору, страсть и смелость двигаться вперёд.</span>
             </figure>
             <figure class="color-bottle-card">
               <img src="assets/alesya/aura/bottles/04-coral.png" alt="Виала коралловая" loading="lazy">
               <figcaption>Коралловый</figcaption>
-              <span class="color-description-slot" aria-hidden="true"></span>
+              <span class="color-description-slot">Цвет гибкости, сотрудничества и исцеления старой боли. Помогает отпускать прошлое и заново открываться любви и партнёрству.</span>
             </figure>
             <figure class="color-bottle-card">
               <img src="assets/alesya/aura/bottles/05-orange.png" alt="Виала оранжевая" loading="lazy">
               <figcaption>Оранжевый</figcaption>
-              <span class="color-description-slot" aria-hidden="true"></span>
+              <span class="color-description-slot">Цвет радости жизни, удовольствия и внутренней наполненности. Помогает вернуть вкус к жизни, оптимизм, чувственность и целостность.</span>
             </figure>
             <figure class="color-bottle-card">
               <img src="assets/alesya/aura/bottles/06-gold.png" alt="Виала золотая" loading="lazy">
               <figcaption>Золотой</figcaption>
-              <span class="color-description-slot" aria-hidden="true"></span>
+              <span class="color-description-slot">Цвет внутренней мудрости и зрелой ценности. Поддерживает связь с внутренним учителем, достоинство и опору на себя.</span>
             </figure>
             <figure class="color-bottle-card">
               <img src="assets/alesya/aura/bottles/07-yellow.png" alt="Виала жёлтая" loading="lazy">
               <figcaption>Жёлтый</figcaption>
-              <span class="color-description-slot" aria-hidden="true"></span>
+              <span class="color-description-slot">Цвет ясности, знания и внутреннего солнца. Помогает увидеть светлую сторону ситуации, вернуть юмор, уверенность и движение к цели.</span>
             </figure>
             <figure class="color-bottle-card">
               <img src="assets/alesya/aura/bottles/08-olive.png" alt="Виала оливковая" loading="lazy">
               <figcaption>Оливковый</figcaption>
-              <span class="color-description-slot" aria-hidden="true"></span>
+              <span class="color-description-slot">Цвет надежды, мира и мягкого лидерства. Помогает освободиться от горечи прошлого, простить и найти эмоциональное равновесие.</span>
             </figure>
             <figure class="color-bottle-card">
               <img src="assets/alesya/aura/bottles/09-green.png" alt="Виала зелёная" loading="lazy">
               <figcaption>Зелёный</figcaption>
-              <span class="color-description-slot" aria-hidden="true"></span>
+              <span class="color-description-slot">Цвет сердца, пространства и внутреннего направления. Помогает чувствовать границы, говорить правду спокойно и впускать перемены.</span>
             </figure>
             <figure class="color-bottle-card">
               <img src="assets/alesya/aura/bottles/10-turquoise.png" alt="Виала бирюзовая" loading="lazy">
               <figcaption>Бирюзовый</figcaption>
-              <span class="color-description-slot" aria-hidden="true"></span>
+              <span class="color-description-slot">Цвет творчества, индивидуальности и общения через сердце. Помогает свободнее проявляться, находить свой голос и творить ради удовольствия.</span>
             </figure>
             <figure class="color-bottle-card">
               <img src="assets/alesya/aura/bottles/11-blue.png" alt="Виала синяя" loading="lazy">
               <figcaption>Синий</figcaption>
-              <span class="color-description-slot" aria-hidden="true"></span>
+              <span class="color-description-slot">Цвет покоя, доверия и защищённости. Помогает замедлиться, услышать тишину внутри и мягко передавать свои мысли.</span>
             </figure>
             <figure class="color-bottle-card">
               <img src="assets/alesya/aura/bottles/12-royal-blue.png" alt="Виала королевско-синяя" loading="lazy">
               <figcaption>Королевско-синий</figcaption>
-              <span class="color-description-slot" aria-hidden="true"></span>
+              <span class="color-description-slot">Цвет интуиции, глубины и тонкого восприятия. Помогает развивать внутреннее видение и яснее чувствовать свой путь.</span>
             </figure>
             <figure class="color-bottle-card">
               <img src="assets/alesya/aura/bottles/13-violet.png" alt="Виала фиолетовая" loading="lazy">
               <figcaption>Фиолетовый</figcaption>
-              <span class="color-description-slot" aria-hidden="true"></span>
+              <span class="color-description-slot">Цвет духовной трансформации и служения. Помогает отпускать старые формы восприятия и соединять земной опыт с глубоким смыслом.</span>
             </figure>
             <figure class="color-bottle-card">
               <img src="assets/alesya/aura/bottles/14-raspberry.png" alt="Виала малиновая" loading="lazy">
               <figcaption>Малиновый</figcaption>
-              <span class="color-description-slot" aria-hidden="true"></span>
+              <span class="color-description-slot">Цвет заботы, красоты в деталях и сердечного внимания. Помогает проявлять нежность через поступки и видеть ценность малого.</span>
             </figure>
             <figure class="color-bottle-card">
               <img src="assets/alesya/aura/bottles/15-clear.png" alt="Прозрачная виала" loading="lazy">
               <figcaption>Прозрачный</figcaption>
-              <span class="color-description-slot" aria-hidden="true"></span>
+              <span class="color-description-slot">Цвет ясности, очищения и света. Помогает увидеть ситуацию без искажений, отделить своё от чужого и прийти к внутренней простоте.</span>
             </figure>
           </div>
         </section>
