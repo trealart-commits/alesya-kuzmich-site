@@ -23,10 +23,81 @@ const directions = {
         <section class="neuro-section">
           <h3>Цвет как подсказка</h3>
           <div class="color-meaning-grid">
-            <p class="color-card color-card-pink"><strong>Розовый</strong>Нежность, принятие, любовь к себе, умение получать заботу.</p>
-            <p class="color-card color-card-blue"><strong>Синий</strong>Спокойствие, честность, границы, выражение себя и ясный голос.</p>
-            <p class="color-card color-card-yellow"><strong>Жёлтый</strong>Личная сила, радость, собранность, ясность и внутреннее солнце.</p>
-            <p class="color-card color-card-orange"><strong>Оранжевый</strong>Удовольствие, чувственность, харизма, вкус к жизни и целостность.</p>
+            <figure class="color-bottle-card">
+              <img src="assets/alesya/aura/bottles/01-dark-magenta.png" alt="Виала тёмная маджента" loading="lazy">
+              <figcaption>Тёмная маджента</figcaption>
+              <span class="color-description-slot" aria-hidden="true"></span>
+            </figure>
+            <figure class="color-bottle-card">
+              <img src="assets/alesya/aura/bottles/02-pink.png" alt="Виала розовая" loading="lazy">
+              <figcaption>Розовый</figcaption>
+              <span class="color-description-slot" aria-hidden="true"></span>
+            </figure>
+            <figure class="color-bottle-card">
+              <img src="assets/alesya/aura/bottles/03-red.png" alt="Виала красная" loading="lazy">
+              <figcaption>Красный</figcaption>
+              <span class="color-description-slot" aria-hidden="true"></span>
+            </figure>
+            <figure class="color-bottle-card">
+              <img src="assets/alesya/aura/bottles/04-coral.png" alt="Виала коралловая" loading="lazy">
+              <figcaption>Коралловый</figcaption>
+              <span class="color-description-slot" aria-hidden="true"></span>
+            </figure>
+            <figure class="color-bottle-card">
+              <img src="assets/alesya/aura/bottles/05-orange.png" alt="Виала оранжевая" loading="lazy">
+              <figcaption>Оранжевый</figcaption>
+              <span class="color-description-slot" aria-hidden="true"></span>
+            </figure>
+            <figure class="color-bottle-card">
+              <img src="assets/alesya/aura/bottles/06-gold.png" alt="Виала золотая" loading="lazy">
+              <figcaption>Золотой</figcaption>
+              <span class="color-description-slot" aria-hidden="true"></span>
+            </figure>
+            <figure class="color-bottle-card">
+              <img src="assets/alesya/aura/bottles/07-yellow.png" alt="Виала жёлтая" loading="lazy">
+              <figcaption>Жёлтый</figcaption>
+              <span class="color-description-slot" aria-hidden="true"></span>
+            </figure>
+            <figure class="color-bottle-card">
+              <img src="assets/alesya/aura/bottles/08-olive.png" alt="Виала оливковая" loading="lazy">
+              <figcaption>Оливковый</figcaption>
+              <span class="color-description-slot" aria-hidden="true"></span>
+            </figure>
+            <figure class="color-bottle-card">
+              <img src="assets/alesya/aura/bottles/09-green.png" alt="Виала зелёная" loading="lazy">
+              <figcaption>Зелёный</figcaption>
+              <span class="color-description-slot" aria-hidden="true"></span>
+            </figure>
+            <figure class="color-bottle-card">
+              <img src="assets/alesya/aura/bottles/10-turquoise.png" alt="Виала бирюзовая" loading="lazy">
+              <figcaption>Бирюзовый</figcaption>
+              <span class="color-description-slot" aria-hidden="true"></span>
+            </figure>
+            <figure class="color-bottle-card">
+              <img src="assets/alesya/aura/bottles/11-blue.png" alt="Виала синяя" loading="lazy">
+              <figcaption>Синий</figcaption>
+              <span class="color-description-slot" aria-hidden="true"></span>
+            </figure>
+            <figure class="color-bottle-card">
+              <img src="assets/alesya/aura/bottles/12-royal-blue.png" alt="Виала королевско-синяя" loading="lazy">
+              <figcaption>Королевско-синий</figcaption>
+              <span class="color-description-slot" aria-hidden="true"></span>
+            </figure>
+            <figure class="color-bottle-card">
+              <img src="assets/alesya/aura/bottles/13-violet.png" alt="Виала фиолетовая" loading="lazy">
+              <figcaption>Фиолетовый</figcaption>
+              <span class="color-description-slot" aria-hidden="true"></span>
+            </figure>
+            <figure class="color-bottle-card">
+              <img src="assets/alesya/aura/bottles/14-raspberry.png" alt="Виала малиновая" loading="lazy">
+              <figcaption>Малиновый</figcaption>
+              <span class="color-description-slot" aria-hidden="true"></span>
+            </figure>
+            <figure class="color-bottle-card">
+              <img src="assets/alesya/aura/bottles/15-clear.png" alt="Прозрачная виала" loading="lazy">
+              <figcaption>Прозрачный</figcaption>
+              <span class="color-description-slot" aria-hidden="true"></span>
+            </figure>
           </div>
         </section>
 
