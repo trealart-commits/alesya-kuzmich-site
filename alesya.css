@@ -1320,6 +1320,17 @@ h1 {
   flex: 1 1 220px;
 }
 
+.format-param {
+  display: block;
+  width: fit-content;
+  margin-top: 16px;
+  padding-top: 10px;
+  border-top: 1px solid color-mix(in srgb, var(--accent-three), transparent 70%);
+  color: color-mix(in srgb, var(--muted), transparent 22%);
+  font-size: 0.92rem;
+  letter-spacing: 0;
+}
+
 .photo-pair,
 .review-grid,
 .price-grid,
