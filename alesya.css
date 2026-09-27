@@ -1232,6 +1232,7 @@ h1 {
 
 .color-bottle-card:hover,
 .color-bottle-card:focus-within {
+  z-index: 5;
   border-color: color-mix(in srgb, var(--accent-three), transparent 50%);
   box-shadow: 0 24px 48px color-mix(in srgb, var(--shadow), transparent 68%);
   transform: translateY(-3px);
@@ -1250,6 +1251,61 @@ h1 {
 }
 
 @media (hover: hover) and (pointer: fine) {
+  .color-description-slot {
+    top: 118px;
+    right: auto;
+    bottom: auto;
+    left: calc(100% - 18px);
+    width: clamp(230px, 18vw, 300px);
+    min-height: auto;
+    padding: 18px 20px;
+    border-radius: 24px;
+    text-align: left;
+    transform: translateX(12px) scale(0.96);
+  }
+
+  .color-description-slot::before {
+    content: "";
+    position: absolute;
+    top: 34px;
+    left: -9px;
+    width: 18px;
+    height: 18px;
+    border-bottom: 1px solid rgba(129, 76, 41, 0.12);
+    border-left: 1px solid rgba(129, 76, 41, 0.12);
+    background: rgba(255, 252, 245, 0.94);
+    transform: rotate(45deg);
+  }
+
+  .color-bottle-card:nth-child(5n-1) .color-description-slot,
+  .color-bottle-card:nth-child(5n) .color-description-slot {
+    right: calc(100% - 18px);
+    left: auto;
+    text-align: right;
+    transform: translateX(-12px) scale(0.96);
+  }
+
+  .color-bottle-card:nth-child(5n-1) .color-description-slot::before,
+  .color-bottle-card:nth-child(5n) .color-description-slot::before {
+    right: -9px;
+    left: auto;
+    border: 0;
+    border-top: 1px solid rgba(129, 76, 41, 0.12);
+    border-right: 1px solid rgba(129, 76, 41, 0.12);
+  }
+
+  .color-bottle-card:hover .color-description-slot,
+  .color-bottle-card:focus-within .color-description-slot {
+    transform: translateX(0) scale(1);
+  }
+
+  .color-bottle-card:nth-child(5n-1):hover .color-description-slot,
+  .color-bottle-card:nth-child(5n):hover .color-description-slot,
+  .color-bottle-card:nth-child(5n-1):focus-within .color-description-slot,
+  .color-bottle-card:nth-child(5n):focus-within .color-description-slot {
+    transform: translateX(0) scale(1);
+  }
+
   .reveal-card:hover .reveal-text,
   .reveal-card:focus-within .reveal-text {
     max-height: 260px;
@@ -1260,6 +1316,49 @@ h1 {
   .reveal-card:hover summary::after,
   .reveal-card:focus-within summary::after {
     transform: translateY(4px) rotate(225deg);
+  }
+}
+
+@media (hover: hover) and (pointer: fine) and (max-width: 1120px) {
+  .color-bottle-card:nth-child(5n-1) .color-description-slot,
+  .color-bottle-card:nth-child(5n) .color-description-slot {
+    right: auto;
+    left: calc(100% - 18px);
+    text-align: left;
+    transform: translateX(12px) scale(0.96);
+  }
+
+  .color-bottle-card:nth-child(5n-1) .color-description-slot::before,
+  .color-bottle-card:nth-child(5n) .color-description-slot::before {
+    right: auto;
+    left: -9px;
+    border: 0;
+    border-bottom: 1px solid rgba(129, 76, 41, 0.12);
+    border-left: 1px solid rgba(129, 76, 41, 0.12);
+  }
+
+  .color-bottle-card:nth-child(3n) .color-description-slot {
+    right: calc(100% - 18px);
+    left: auto;
+    text-align: right;
+    transform: translateX(-12px) scale(0.96);
+  }
+
+  .color-bottle-card:nth-child(3n) .color-description-slot::before {
+    right: -9px;
+    left: auto;
+    border: 0;
+    border-top: 1px solid rgba(129, 76, 41, 0.12);
+    border-right: 1px solid rgba(129, 76, 41, 0.12);
+  }
+
+  .color-bottle-card:nth-child(5n-1):hover .color-description-slot,
+  .color-bottle-card:nth-child(5n):hover .color-description-slot,
+  .color-bottle-card:nth-child(3n):hover .color-description-slot,
+  .color-bottle-card:nth-child(5n-1):focus-within .color-description-slot,
+  .color-bottle-card:nth-child(5n):focus-within .color-description-slot,
+  .color-bottle-card:nth-child(3n):focus-within .color-description-slot {
+    transform: translateX(0) scale(1);
   }
 }
 
@@ -1520,6 +1619,21 @@ h1 {
 
   .color-meaning-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .color-description-slot {
+    top: auto;
+    right: 14px;
+    bottom: 18px;
+    left: 14px;
+    width: auto;
+    min-height: 132px;
+    text-align: center;
+    transform: translateY(12px) scale(0.96);
+  }
+
+  .color-description-slot::before {
+    display: none;
   }
 }
 
