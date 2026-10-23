@@ -500,9 +500,17 @@ document.querySelectorAll("[data-field]").forEach((element) => {
   }
 
   if (field === "reviews") {
-    element.innerHTML = data.reviews
+    if (key === "aura") {
+      element.innerHTML = [9, 10].map((number) =>
+        `<video class="aura-review-video" controls playsinline preload="metadata" aria-label="Видеоотзыв об Aura-Soma"><source src="assets/alesya/aura/reviews/review-${String(number).padStart(2, "0")}.mp4" type="video/mp4"></video>`
+      ).join("") + [1, 2, 3, 4, 5, 7].map((number) =>
+        `<a href="assets/alesya/aura/reviews/review-${String(number).padStart(2, "0")}.jpg" target="_blank" rel="noopener" aria-label="Открыть отзыв об Aura-Soma"><img class="aura-review-image" src="assets/alesya/aura/reviews/review-${String(number).padStart(2, "0")}.jpg" alt="Отзыв об Aura-Soma" loading="lazy"></a>`
+      ).join("");
+    } else {
+      element.innerHTML = data.reviews
       .map((review) => `<blockquote>${review}</blockquote>`)
       .join("");
+    }
   }
 
   if (field === "prices") {
