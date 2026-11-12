@@ -1540,6 +1540,13 @@ h1 {
 }
 
 @media (max-width: 860px) {
+  [data-direction="aura"] .neuro-content h3.wide-heading {
+    min-width: 0;
+    white-space: normal;
+    overflow-wrap: anywhere;
+    line-height: 1.2;
+  }
+
   .color-meaning-grid .color-bottle-card {
     min-width: 0;
     padding-inline: 10px;
@@ -1547,7 +1554,10 @@ h1 {
 
   .color-meaning-grid .color-bottle-card .color-description-slot {
     position: static;
-    width: auto;
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    max-width: 100%;
     min-height: 0;
     margin-top: 12px;
     padding: 12px 8px;
