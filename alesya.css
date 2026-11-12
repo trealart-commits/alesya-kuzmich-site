@@ -1540,6 +1540,24 @@ h1 {
 }
 
 @media (max-width: 860px) {
+  .color-meaning-grid .color-bottle-card {
+    min-width: 0;
+    padding-inline: 10px;
+  }
+
+  .color-meaning-grid .color-bottle-card .color-description-slot {
+    position: static;
+    width: auto;
+    min-height: 0;
+    margin-top: 12px;
+    padding: 12px 8px;
+    overflow-wrap: anywhere;
+    text-align: center;
+    opacity: 1;
+    pointer-events: auto;
+    transform: none;
+  }
+
   .radial-card {
     display: grid;
     gap: 12px;
