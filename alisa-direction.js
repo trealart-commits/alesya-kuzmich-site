@@ -196,7 +196,15 @@ const directions = {
       "Цвета будто активизировали внутренний процесс: многое стало разворачиваться изнутри, без лишних слов.",
       "Очень советую сессии Aura-Soma и кисточек: у Алеси тонкое чувствование человека и красивый бережный подход.",
     ],
-    prices: ["Личная сессия с цветом и диагностикой — 4 700", "Большой формат с телесной практикой и консультацией — 8 000"],
+    prices: [
+      { label: "Старт онлайн", title: "Видеозвонок", duration: "25 минут", includes: ["Диагностика по выбранным вами цветам и разбор вашего запроса."], rates: [["Видеозвонок", 990]], note: "Вы выбираете цвета заранее. Если решите продолжить работу со мной, эта встреча будет подарочной." },
+      { label: "Пакет 1", title: "Цветное откровение", duration: "1 ч 30 мин", includes: ["Диагностика по цветам Aura-Soma и сессия с Лучевой Световой указкой Beamer Light Pen."], rates: [["1 сессия", 5500]] },
+      { label: "Пакет 2", title: "Расслабление и баланс", duration: "2 часа", includes: ["1 час: нейрорелаксация с кисточками.", "1 час: диагностика по цвету и сессия с Лучевой Световой указкой Beamer Light Pen."], rates: [["1 сессия", 11000], ["5 сессий", 47000]] },
+      { label: "Пакет 3", title: "Ясность и баланс", duration: "2 часа", includes: ["1 час: телесно-аналитическая терапия.", "1 час: диагностика по цвету и сессия с Лучевой Световой указкой Beamer Light Pen."], rates: [["1 сессия", 9000], ["5 сессий", 40000]] },
+      { label: "Пакет 4", title: "Счастье", duration: "3 часа", includes: ["1 час: телесно-аналитическая терапия.", "1 час: нейрорелаксация с кисточками.", "1 час: диагностика по цвету и сессия с Лучевой Световой указкой Beamer Light Pen."], rates: [["1 сессия", 17000], ["5 сессий", 75000]] },
+      { label: "Пакет 5", title: "Тело помнит всё", duration: "1 ч 30 мин", includes: ["Сессия телесно-аналитической терапии."], rates: [["1 сессия", 5500], ["5 сессий", 25000]] },
+      { label: "Пакет 6", title: "Тело помнит всё и хочет отпустить напряжение", duration: "2 часа", includes: ["1 час: телесно-аналитическая терапия.", "1 час: нейрорелаксация с кисточками."], rates: [["1 сессия", 11000], ["5 сессий", 50000]] },
+    ],
     inlineGallery: true,
     galleryPlaceholder: true,
   },
@@ -514,7 +522,22 @@ document.querySelectorAll("[data-field]").forEach((element) => {
   }
 
   if (field === "prices") {
-    element.innerHTML = data.prices.map((price) => `<article>${price}</article>`).join("");
+    if (key === "aura") {
+      const rubles = new Intl.NumberFormat("ru-RU");
+      element.classList.add("aura-price-grid");
+      element.innerHTML = data.prices.map((price, index) => `
+        ${index === 5 ? '<h3 class="aura-price-group">Телесные практики</h3>' : ""}
+        <article class="aura-price-card">
+          <div class="aura-price-meta"><span>${price.label}</span><span>${price.duration}</span></div>
+          <h${index >= 5 ? 4 : 3}>${price.title}</h${index >= 5 ? 4 : 3}>
+          <ul>${price.includes.map((item) => `<li>${item}</li>`).join("")}</ul>
+          ${price.note ? `<p class="aura-price-note">${price.note}</p>` : ""}
+          <dl>${price.rates.map(([label, amount]) => `<div><dt>${label}</dt><dd>${rubles.format(amount)}&nbsp;₽</dd></div>`).join("")}</dl>
+        </article>
+      `).join("");
+    } else {
+      element.innerHTML = data.prices.map((price) => `<article>${price}</article>`).join("");
+    }
   }
 
   if (field === "gallery") {

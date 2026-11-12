@@ -1479,6 +1479,65 @@ h1 {
   line-height: 1.55;
 }
 
+.aura-price-card {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  background: #fffaf3;
+}
+
+.aura-price-meta {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 6px 12px;
+  font-size: 0.9rem;
+}
+
+.aura-price-card h3,
+.aura-price-card h4,
+.aura-price-group {
+  margin: 0;
+  color: var(--ink);
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 1.5rem;
+  line-height: 1.15;
+}
+
+.aura-price-card ul {
+  margin: 0;
+  padding-inline-start: 1.15em;
+}
+
+.aura-price-note {
+  margin: 0;
+  font-size: 0.92rem;
+}
+
+.aura-price-card dl {
+  margin: auto 0 0;
+  padding-top: 10px;
+  border-top: 1px solid var(--line);
+}
+
+.aura-price-card dl div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 4px 12px;
+}
+
+.aura-price-card dd {
+  margin: 0;
+  color: var(--ink);
+  font-weight: 700;
+}
+
+.aura-price-group {
+  grid-column: 1 / -1;
+  margin-top: 16px;
+}
+
 .gallery-hero {
   padding: clamp(24px, 5vw, 54px);
 }
