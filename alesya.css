@@ -1176,6 +1176,15 @@ h1 {
     transform 220ms ease;
 }
 
+.color-bottle-toggle {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+}
+
 .color-bottle-card img {
   display: block;
   width: 100%;
@@ -1555,7 +1564,7 @@ h1 {
   .color-meaning-grid .color-bottle-card .color-description-slot {
     position: static;
     box-sizing: border-box;
-    display: block;
+    display: none;
     width: 100%;
     max-width: 100%;
     min-height: 0;
@@ -1566,6 +1575,10 @@ h1 {
     opacity: 1;
     pointer-events: auto;
     transform: none;
+  }
+
+  .color-meaning-grid .color-bottle-card.is-expanded .color-description-slot {
+    display: block;
   }
 
   .radial-card {

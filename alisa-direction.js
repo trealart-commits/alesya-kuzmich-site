@@ -564,6 +564,28 @@ const protectHangingWords = (root) => {
 
 protectHangingWords(document.body);
 
+if (key === "aura") {
+  const narrowPalette = window.matchMedia("(max-width: 860px)");
+  document.querySelectorAll(".color-bottle-card").forEach((card, index) => {
+    const image = card.querySelector("img");
+    const description = card.querySelector(".color-description-slot");
+    const button = document.createElement("button");
+    button.type = "button";
+    button.className = "color-bottle-toggle";
+    button.setAttribute("aria-label", card.querySelector("figcaption").textContent);
+    description.id = `color-description-${index + 1}`;
+    button.setAttribute("aria-controls", description.id);
+    button.setAttribute("aria-expanded", "false");
+    image.replaceWith(button);
+    button.append(image);
+    button.addEventListener("click", () => {
+      if (!narrowPalette.matches) return;
+      const open = card.classList.toggle("is-expanded");
+      button.setAttribute("aria-expanded", String(open));
+    });
+  });
+}
+
 if (document.body.dataset.page !== "gallery") {
   const canHover = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
 
