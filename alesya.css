@@ -1549,6 +1549,21 @@ h1 {
 }
 
 @media (max-width: 860px) {
+  .color-bottle-toggle::after {
+    content: "";
+    display: block;
+    width: 8px;
+    height: 8px;
+    margin: 10px auto 6px;
+    border-right: 2px solid var(--muted);
+    border-bottom: 2px solid var(--muted);
+    transform: rotate(45deg);
+  }
+
+  .color-bottle-toggle[aria-expanded="true"]::after {
+    transform: rotate(225deg);
+  }
+
   [data-direction="aura"] .neuro-content h3.wide-heading {
     min-width: 0;
     white-space: normal;
