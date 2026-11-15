@@ -524,6 +524,11 @@ document.querySelectorAll("[data-field]").forEach((element) => {
       heading.replaceWith(disclosure);
       summary.append(heading);
       disclosure.append(summary, element);
+      document.querySelector('.section-menu a[href="#reviews"]')?.addEventListener("click", (event) => {
+        if (!event.metaKey && !event.ctrlKey && !event.shiftKey && !event.altKey) {
+          disclosure.open = true;
+        }
+      });
       disclosure.addEventListener("toggle", () => {
         if (!disclosure.open) {
           element.querySelectorAll("video").forEach((video) => video.pause());
