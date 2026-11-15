@@ -215,7 +215,7 @@ const directions = {
     ],
     inlineGallery: true,
     gallery: [
-      { src: "assets/alesya/aura/gallery-01.jpg", alt: "Фото из практики Aura-Soma" },
+      { src: "assets/alesya/aura/gallery-01.jpg?v=2", alt: "Алеся с флаконом на фоне палитры Aura-Soma" },
       { src: "assets/alesya/aura/gallery-02.jpg", alt: "Коллаж с Алесей и флаконами Aura-Soma" },
       { src: "assets/alesya/aura/gallery-03.jpg", alt: "Выбор цветной виалы на сессии Aura-Soma" },
       { src: "assets/alesya/aura/gallery-04.jpg", alt: "Практика со световой указкой Beamer Light Pen" },
