@@ -1148,17 +1148,32 @@ h1 {
 }
 
 .aura-overview {
-  text-align: center;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 204px);
+  align-items: center;
+  gap: 24px;
 }
 
-.aura-content .aura-overview h3 {
-  max-width: none;
+.aura-overview-copy p + p {
+  margin-top: 14px;
 }
 
 .aura-overview-player {
   position: relative;
-  width: min(100%, 340px, 36svh);
+  z-index: 1;
+  width: 100%;
   margin: 0 auto;
+}
+
+@media (max-width: 640px) {
+  .aura-overview {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 18px;
+  }
+
+  .aura-overview-player {
+    width: min(100%, 168px);
+  }
 }
 
 .aura-overview-player video {
