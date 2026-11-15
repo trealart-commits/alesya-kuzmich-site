@@ -68,7 +68,7 @@ const directions = {
               <figcaption>Зелёный</figcaption>
               <span class="color-description-slot">Цвет сердца, пространства и внутреннего направления. Помогает чувствовать границы, говорить правду спокойно и впускать перемены.</span>
             </figure>
-            <figure class="color-bottle-card">
+            <figure class="color-bottle-card" data-color-video="turquoise">
               <img src="assets/alesya/aura/bottles/10-turquoise.png" alt="Виала бирюзовая" loading="lazy">
               <figcaption>Бирюзовый</figcaption>
               <span class="color-description-slot">Цвет творчества, индивидуальности и общения через сердце. Помогает свободнее проявляться, находить свой голос и творить ради удовольствия.</span>
@@ -608,11 +608,34 @@ if (key === "aura") {
     button.type = "button";
     button.className = "color-bottle-toggle";
     button.setAttribute("aria-label", card.querySelector("figcaption").textContent);
+    image.replaceWith(button);
+    button.append(image);
+
+    if (card.dataset.colorVideo === "turquoise") {
+      const dialog = document.createElement("dialog");
+      dialog.className = "color-video-dialog";
+      dialog.setAttribute("aria-labelledby", "turquoise-video-title");
+      dialog.innerHTML = `
+        <div class="color-video-header">
+          <h2 id="turquoise-video-title">Бирюзовый</h2>
+          <form method="dialog"><button type="submit" aria-label="Закрыть">×</button></form>
+        </div>
+        <p></p>
+        <video src="assets/alesya/aura/turquoise-video.mp4" controls playsinline preload="none" aria-label="Видео о бирюзовом цвете"></video>
+      `;
+      dialog.querySelector("p").textContent = description.textContent;
+      document.body.append(dialog);
+      button.insertAdjacentHTML("beforeend", '<span class="color-video-badge">▶ Видео</span>');
+      button.setAttribute("aria-label", "Бирюзовый: описание и видео");
+      button.setAttribute("aria-haspopup", "dialog");
+      button.addEventListener("click", () => dialog.showModal());
+      dialog.addEventListener("close", () => dialog.querySelector("video").pause());
+      return;
+    }
+
     description.id = `color-description-${index + 1}`;
     button.setAttribute("aria-controls", description.id);
     button.setAttribute("aria-expanded", "false");
-    image.replaceWith(button);
-    button.append(image);
     button.addEventListener("click", () => {
       if (!narrowPalette.matches) return;
       const open = card.classList.toggle("is-expanded");
