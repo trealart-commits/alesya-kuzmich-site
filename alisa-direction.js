@@ -509,6 +509,18 @@ document.querySelectorAll("[data-field]").forEach((element) => {
 
   if (field === "reviews") {
     if (key === "aura") {
+      const heading = element.previousElementSibling;
+      const disclosure = document.createElement("details");
+      const summary = document.createElement("summary");
+      disclosure.className = "aura-review-toggle";
+      heading.replaceWith(disclosure);
+      summary.append(heading);
+      disclosure.append(summary, element);
+      disclosure.addEventListener("toggle", () => {
+        if (!disclosure.open) {
+          element.querySelectorAll("video").forEach((video) => video.pause());
+        }
+      });
       element.innerHTML = [9, 10].map((number) =>
         `<video class="aura-review-video" controls playsinline preload="metadata" aria-label="Видеоотзыв об Aura-Soma"><source src="assets/alesya/aura/reviews/review-${String(number).padStart(2, "0")}.mp4" type="video/mp4"></video>`
       ).join("") + [1, 2, 3, 4, 5, 7].map((number) =>
