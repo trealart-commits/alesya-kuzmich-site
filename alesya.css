@@ -1147,6 +1147,51 @@ h1 {
   transform: translateY(4px) rotate(225deg);
 }
 
+.aura-overview {
+  text-align: center;
+}
+
+.aura-content .aura-overview h3 {
+  max-width: none;
+}
+
+.aura-overview-player {
+  position: relative;
+  width: min(100%, 340px, 36svh);
+  margin: 0 auto;
+}
+
+.aura-overview-player video {
+  display: block;
+  width: 100%;
+  aspect-ratio: 9 / 16;
+  object-fit: contain;
+  border-radius: 8px;
+  background: #161312;
+}
+
+.aura-overview-play:not([hidden]) {
+  position: absolute;
+  inset: 50% auto auto 50%;
+  display: grid;
+  place-items: center;
+  width: 56px;
+  height: 56px;
+  padding: 0;
+  translate: -50% -50%;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  background: rgba(25, 17, 13, 0.82);
+  cursor: pointer;
+}
+
+.aura-overview-play::after {
+  content: "";
+  margin-left: 4px;
+  border-block: 9px solid transparent;
+  border-left: 14px solid #fff;
+}
+
 .color-meaning-grid {
   position: relative;
   z-index: 1;

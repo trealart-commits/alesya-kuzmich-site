@@ -20,6 +20,16 @@ const directions = {
           <p>Это бережная практика для тех, кто хочет услышать себя яснее, выйти из внутреннего шума и почувствовать состояние, из которого легче принимать решения.</p>
         </section>
 
+        <section class="neuro-section aura-overview">
+          <h3>Знакомство с Aura-Soma</h3>
+          <div class="aura-overview-player">
+            <video controls playsinline preload="none" poster="assets/alesya/aura/overview-poster.jpg" aria-label="Знакомство с Aura-Soma">
+              <source src="assets/alesya/aura/overview-video.mp4" type="video/mp4">
+            </video>
+            <button type="button" class="aura-overview-play" aria-label="Воспроизвести видео «Знакомство с Aura-Soma»" hidden></button>
+          </div>
+        </section>
+
         <section class="neuro-section color-prompt-section">
           <h3>Цвет как подсказка</h3>
           <div class="color-meaning-grid">
@@ -600,6 +610,17 @@ const protectHangingWords = (root) => {
 protectHangingWords(document.body);
 
 if (key === "aura") {
+  const overview = document.querySelector(".aura-overview-player");
+  if (overview) {
+    const video = overview.querySelector("video");
+    const play = overview.querySelector("button");
+    play.hidden = false;
+    video.addEventListener("play", () => { play.hidden = true; }, { once: true });
+    play.addEventListener("click", () => {
+      video.play().catch(() => { play.hidden = true; });
+    });
+  }
+
   const narrowPalette = window.matchMedia("(max-width: 860px)");
   document.querySelectorAll(".color-bottle-card").forEach((card, index) => {
     const image = card.querySelector("img");
