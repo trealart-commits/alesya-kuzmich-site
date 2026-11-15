@@ -214,7 +214,12 @@ const directions = {
       { label: "Пакет 6", title: "Тело помнит всё и хочет отпустить напряжение", duration: "2 часа", includes: ["1 час: телесно-аналитическая терапия.", "1 час: нейрорелаксация с кисточками."], rates: [["1 сессия", 11000], ["5 сессий", 50000]] },
     ],
     inlineGallery: true,
-    galleryPlaceholder: true,
+    gallery: [
+      { src: "assets/alesya/aura/gallery-01.jpg", alt: "Фото из практики Aura-Soma" },
+      { src: "assets/alesya/aura/gallery-02.jpg", alt: "Коллаж с Алесей и флаконами Aura-Soma" },
+      { src: "assets/alesya/aura/gallery-03.jpg", alt: "Выбор цветной виалы на сессии Aura-Soma" },
+      { src: "assets/alesya/aura/gallery-04.jpg", alt: "Практика со световой указкой Beamer Light Pen" },
+    ],
   },
   fans: {
     title: "Веера",
